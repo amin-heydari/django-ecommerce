@@ -1,0 +1,25 @@
+from django import template
+from jalali_date import date2jalali
+
+register = template.Library()
+
+
+# register.filter('cut', cut)
+@register.filter(name='cut')
+def cut(value, arg):
+    return value.replace(arg, '')
+
+
+@register.filter(name='show_jalali_date')
+def show_jalali_date(value):
+    return date2jalali(value)
+
+
+@register.filter(name='three_digits_currency')
+def three_digits_currency(value: int):
+    return '{:,}'.format(value) + 'تومان'
+
+
+@register.simple_tag
+def multiply(quanitiy, price, *args, **kwargs):
+    return three_digits_currency(quanitiy * price)
