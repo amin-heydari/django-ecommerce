@@ -61,4 +61,4 @@ If you'd like to contribute to this project, feel free to fork the repository an
 
 ## Contact
 
-For any questions or issues, please contact us at amin.heydari43@gmail.com.
+For any questions or issues, please contact at amin.heydari43@gmail.com.
